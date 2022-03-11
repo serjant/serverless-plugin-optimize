@@ -459,7 +459,6 @@ class Optimize {
           /** Copy file */
           const externalEntry = resolveFrom(functionFile, external) || functionDir + '/'
           const externalDir = externalEntry.substring(
-            this.serverless.config.servicePath.length,
             externalEntry.lastIndexOf('node_modules/' + external)
           ) + 'node_modules/' + external
           return fs.copyAsync(
